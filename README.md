@@ -80,7 +80,7 @@ GET /admin/books?page=2&perPage=10
 $page=Page number, $perPage = Number of entry you want to show
 <br>
 It will return data as a JSON response with the paginataion response.
-`
+
 #### Response
 ```
 {
@@ -106,6 +106,19 @@ POST /admin/books
 `
 
 Pass all the required parameters in the form body.
+<br>Form Body:
+```
+array(
+	'title' => 'Php advancedPhp advanced',
+	'author' => 'praveen',
+	'genre' => 'Est',
+	'description' => 'in this book, all cover',
+	'isbn' => '1234667',
+	'image'=> new CURLFILE('/C:/Users/dekstop/logo.jpg'),
+	'published' => '2022-02-22',
+	'publisher' => 'Packt '
+	)
+```
 
 #### Response
 ```
@@ -132,6 +145,19 @@ Pass all the required parameters in the form body.
 POST /admin/books/$bookId?_method=put
 `
 Pass $bookId in parameter, andPass required fields in the form body.
+<br>Form Body:
+```
+array(
+	'title' => 'Php advancedPhp advanced',
+	'author' => 'praveen',
+	'genre' => 'Est',
+	'description' => 'in this book, all cover',
+	'isbn' => '1234667',
+	'image'=> new CURLFILE('/C:/Users/dekstop/logo.jpg'),
+	'published' => '2022-02-22',
+	'publisher' => 'Packt '
+	)
+```
 
 #### Response
 ```
