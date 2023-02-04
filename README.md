@@ -224,7 +224,8 @@ Pass $bookId in parameter.
 }
 ```
 
-### For Customer or on website access
+### For Customer 
+The below APIs for the customer end
 
 ### Search book
 #### Request
@@ -233,7 +234,9 @@ GET /search?q=Queen
 `
 
 q=is the search query parameter, and other paramaters are for filter:
-<br>authors, genre, publisher. You can pass multiple parameter. Example:
+<br>authors, genre, publisher. 
+<br>You can pass multiple parameter. Example:<br>
+
 `/search?q=Queen&page=1&perPage=10&authors=Doloribus Optio,Sapiente Autem&genre=Wordpress&publisher=Shim Publisher`
 
 
