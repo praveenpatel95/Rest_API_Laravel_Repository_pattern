@@ -138,7 +138,7 @@ array(
 ```
 
 #### Response
-```
+```javascript
 {
     "error": false,
     "message": null,
@@ -177,7 +177,7 @@ array(
 ```
 
 #### Response
-```
+```javascript
 {
     "error": false,
     "message": null,
@@ -203,7 +203,7 @@ GET /admin/books/$bookId
 Pass $bookId in parameter.
 
 #### Response
-```
+```javascript
 {
     "error": false,
     "message": null,
@@ -233,7 +233,7 @@ Pass $bookId in parameter.
 
 
 #### Response
-```
+```javascript
 {
     "error": false,
     "message": null,
@@ -295,12 +295,12 @@ q=is the search query parameter, and other paramaters are for filter:
 GET /filters
 `
 
-It will give you all authors, genre and publications with group by, so you can use this values as a filter in frondend:
+It will give you all authors, genre and publications with group by, so you can use this values as a filter in frontend:
 
 
 
 #### Response
-```
+```javascript
 {
     "error": false,
     "message": null,
