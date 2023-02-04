@@ -81,8 +81,10 @@ The REST API for the admin is described below.
 `
 GET /admin/books?page=2&perPage=10
 `
+#### Params
+- page =Page number
+- perPage = Number of entry you want to show
 
-$page=Page number, $perPage = Number of entry you want to show
 <br>
 It will return data as a JSON response with the paginataion.
 
@@ -157,11 +159,13 @@ array(
 ```
 
 ### Update the book detail
+
 #### Request
 `
-POST /admin/books/$bookId?_method=put
+POST /admin/books/2?_method=put
 `
-Pass $bookId in parameter, andPass required fields in the form body.
+
+2 is the book id,Pass book id in parameter, andPass required fields in the form body.
 <br>Form Body:
 ```
 array(
@@ -198,9 +202,10 @@ array(
 ### Get a book detail by id
 #### Request
 `
-GET /admin/books/$bookId
+GET /admin/books/2
 `
-Pass $bookId in parameter.
+
+2 is the book id, Pass book id in parameter.
 
 #### Response
 ```javascript
@@ -226,10 +231,10 @@ Pass $bookId in parameter.
 ### Delete a book
 #### Request
 `
-DELETE /admin/books/$bookId
+DELETE /admin/books/2
 `
 
-Pass $bookId in parameter.
+2 is the book id, Pass book id in parameter.
 
 
 #### Response
