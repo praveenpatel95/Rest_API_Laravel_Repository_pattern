@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "d8a70790-0ecd-41be-b69f-80cbc01aeb39",
+		"name": "Pack API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9499370"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Get all books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/books?page=2&perPage=10",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"books"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "perPage",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/books/338",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"books",
+								"338"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/books/408",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"books",
+								"408"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "praveen",
+									"type": "text"
+								},
+								{
+									"key": "genre",
+									"value": "Est",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "in this book, all cover",
+									"type": "text"
+								},
+								{
+									"key": "isbn",
+									"value": "1234667",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Rapid IT World/OneDrive/Desktop/logo.jpg"
+								},
+								{
+									"key": "published",
+									"value": "2022-02-22",
+									"type": "text"
+								},
+								{
+									"key": "publisher",
+									"value": "Packt ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/admin/books",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Php advancedPhp advanced",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "praveen",
+									"type": "text"
+								},
+								{
+									"key": "genre",
+									"value": "Est",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "in this book, all cover",
+									"type": "text"
+								},
+								{
+									"key": "isbn",
+									"value": "1234667",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Rapid IT World/OneDrive/Desktop/logo.jpg"
+								},
+								{
+									"key": "published",
+									"value": "2022-02-22",
+									"type": "text"
+								},
+								{
+									"key": "publisher",
+									"value": "Packt ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/admin/books/1?_method=put",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"books",
+								"1"
+							],
+							"query": [
+								{
+									"key": "_method",
+									"value": "put"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/search?q=Queen&page=1&perPage=10&genre=Wordpress",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Queen"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "perPage",
+							"value": "10"
+						},
+						{
+							"key": "authors",
+							"value": "Doloribus Optio,Sapiente Autem",
+							"disabled": true
+						},
+						{
+							"key": "genre",
+							"value": "Wordpress"
+						},
+						{
+							"key": "publisher",
+							"value": "Shim Publisher",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter Paramters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/filters",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"filters"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
