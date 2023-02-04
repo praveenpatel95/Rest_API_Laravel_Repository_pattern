@@ -1,0 +1,38 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('books', function (Blueprint $table) {
+            $table->id();
+            $table->string('title');
+            $table->string('author', 50);
+            $table->string('genre', 50);
+            $table->text('description');
+            $table->string('isbn', 20); //some time isb number in character(X) also
+            $table->string('image');
+            $table->date('published');
+            $table->string('publisher', 100);
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('books');
+    }
+};
