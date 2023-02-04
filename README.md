@@ -11,7 +11,7 @@ This library for handling apis of the given assessment.
 Clone the repository:
 
 ```
-https://github.com/praveenpatel95/packt_backend_assessment.git
+git clone https://github.com/praveenpatel95/packt_backend_assessment.git
 
 ```
 
