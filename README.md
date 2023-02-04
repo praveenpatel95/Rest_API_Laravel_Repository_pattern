@@ -2,6 +2,10 @@
 
 This library for handling apis of the given assessment.
 
+## Requirement
+
+- Minimum PHP ^8.1
+
 ## Installation
 
 Clone the repository:
@@ -21,8 +25,13 @@ Install composer with below command:
 composer install
 ```
 
-Then copy .env.example file and rename with .env file.<br />
-Just update the database credentials.
+## Quick usage 
+
+Copy .env.example file and rename with .env file.<br />
+Or you can run this command
+`cp .env.example .env`
+<br />Just update the database credentials.
+
 ```
 DB_HOST=127.0.0.1
 DB_PORT=3306
@@ -49,8 +58,6 @@ php artisan db:seed
 ```
 
 
-
-
 ## Run Server
 
 Now you can run your server with this command:
@@ -58,37 +65,47 @@ Now you can run your server with this command:
 php artisan serve
 ```
 
-## Usage 
+## Rest API with example 
 
 I attached the postman collection file in the repository for a better understanding and using the APIs.  Import the file in your postman and change the {{base_url}} in your postman environment.
 You can find  all APIs endpoints there.
 
 
-### REST API
-The REST API to the Packt app is described below.
+### For admin access
+The REST API for the admin is described below.
+- Admin can create, edit, delete, and get the books. Below are APIs for the admin access.
 
 
-### For admin access api's:
-Admin can create, edit, delete, and get the books. Below are APIs for the admin access.
-
-### Get All the books
-#### Request
+ ### Get All the books
+ #### Request
 `
 GET /admin/books?page=2&perPage=10
 `
 
 $page=Page number, $perPage = Number of entry you want to show
 <br>
-It will return data as a JSON response with the paginataion response.
+It will return data as a JSON response with the paginataion.
 
 #### Response
-```
+```javascript
 {
     "error": false,
     "message": null,
     "data": {
         "current_page": 2,
-        "data": [],
+        "data":[
+			{
+                "id": 12,
+                "title": "Queen in front of the hall.",
+                "author": "Sapiente Autem",
+                "genre": "SEO",
+                "description": "Dignissimos quaerat quasi asperiores voluptas. ",
+                "isbn": "4251974174",
+                "image": "http://127.0.0.1:8000/storage/books/4251974174.jpg",
+                "published": "1979-09-11",
+                "publisher": "Packt"
+            }
+		],
 		"next_page_url": "/admin/books?page=3",
         "path": "/admin/books",
         "per_page": 10,
@@ -243,13 +260,25 @@ q=is the search query parameter, and other paramaters are for filter:
 
 
 #### Response
-```
+```javascript
 {
     "error": false,
     "message": null,
     "data": {
         "current_page": 2,
-        "data": [],
+        "data":[
+			{
+                "id": 12,
+                "title": "Queen in front of the hall.",
+                "author": "Sapiente Autem",
+                "genre": "SEO",
+                "description": "Dignissimos quaerat quasi asperiores voluptas. ",
+                "isbn": "4251974174",
+                "image": "http://127.0.0.1:8000/storage/books/4251974174.jpg",
+                "published": "1979-09-11",
+                "publisher": "Packt"
+            }
+		],
 		"next_page_url": "/admin/books?page=3",
         "path": "/admin/books",
         "per_page": 10,
