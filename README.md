@@ -58,7 +58,7 @@ Now you can run your server with this command:
 php artisan serve
 ```
 
-## Usage
+## Usage 
 
 I attached the postman collection file in the repository for a better understanding and using the APIs.  Import the file in your postman and change the {{base_url}} in your postman environment.
 You can find  all APIs endpoints there.
@@ -69,7 +69,7 @@ The REST API to the Packt app is described below.
 
 
 ### For admin access api's:
-
+Admin can create, edit, delete, and get the books. Below are APIs for the admin access.
 
 ### Get All the books
 #### Request
@@ -124,7 +124,7 @@ Pass all the required parameters in the form body.
 }
 ```
 
-### Create a new book
+### Update the book detail
 #### Request
 `
 POST /admin/books/$bookId?_method=put
