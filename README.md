@@ -75,6 +75,7 @@ Admin can create, edit, delete, and get the books. Below are APIs for the admin 
 #### Request
 `
 GET /admin/books?page=2&perPage=10
+`
 
 $page=Page number, $perPage = Number of entry you want to show
 <br>
@@ -102,9 +103,10 @@ It will return data as a JSON response with the paginataion response.
 #### Request
 `
 POST /admin/books
+`
 
 Pass all the required parameters in the form body.
-`
+
 #### Response
 ```
 {
@@ -128,9 +130,9 @@ Pass all the required parameters in the form body.
 #### Request
 `
 POST /admin/books/$bookId?_method=put
-
-Pass $bookId in parameter, andPass required fields in the form body.
 `
+Pass $bookId in parameter, andPass required fields in the form body.
+
 #### Response
 ```
 {
@@ -154,9 +156,9 @@ Pass $bookId in parameter, andPass required fields in the form body.
 #### Request
 `
 GET /admin/books/$bookId
-
-Pass $bookId in parameter.
 `
+Pass $bookId in parameter.
+
 #### Response
 ```
 {
