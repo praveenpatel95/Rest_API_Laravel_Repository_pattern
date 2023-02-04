@@ -227,7 +227,9 @@ Pass $bookId in parameter.
 ### For Customer 
 The below APIs for the customer end
 
-### Search book
+### Search books
+For get all the books as per passed parameters and page, this api will give the books data.
+
 #### Request
 `
 GET /search?q=Queen
