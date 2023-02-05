@@ -28,10 +28,10 @@ class BookRespository extends BaseRepository implements BookInterface
     {
         $q = $params['q'];
         $query = $this->model->where(function ($que) use ($q) {
-            $que->where('title', 'like', "$q%")
-                ->orWhere('author', 'like', "$q%")
-                ->orWhere('isbn', 'like', "$q%")
-                ->orWhere('genre', 'like', "$q%");
+            $que->where('title', 'like', "%$q%")
+                ->orWhere('author', 'like', "%$q%")
+                ->orWhere('isbn', 'like', "%$q%")
+                ->orWhere('genre', 'like', "%$q%");
         });
         if(isset($params['authors'])){
             $query = $query->whereIn('author', explode(",", $params['authors']));

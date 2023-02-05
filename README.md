@@ -1,6 +1,6 @@
-# Packt Book Publication Backend Assessment
+# Books Rest API - Backend Assessment
 
-This library for handling apis of the given assessment.
+The library is developed for the manage Rest API of the book publication,  as per the given assessment. In this, I explain how we can design better API with strict Type and use PHP Contracts and repository patterns.
 
 ## Requirement
 
@@ -39,6 +39,7 @@ DB_DATABASE=my_db_name
 DB_USERNAME=my_user_name
 DB_PASSWORD=my_password
 ```
+
 
 Run storage command for store the images in folder:
 ```
