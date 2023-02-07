@@ -4,7 +4,7 @@ The library is developed for the manage Rest API of the book publication,  as pe
 
 ## Requirement
 
-- Minimum PHP 8.1
+- PHP 8.1
 
 ## Installation
 
