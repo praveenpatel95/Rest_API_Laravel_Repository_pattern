@@ -2,14 +2,19 @@
 
 namespace App\Helpers;
 
+use Illuminate\Http\JsonResponse;
+
 class ApiResponse
 {
     /**
-     * @param array $result
-     * @param string $message
+     * @param $result
+     * @param string|null $message
+     * @param $code
      * @return \Illuminate\Http\JsonResponse
      */
-    static function success( $result = null, string $message = null, $code =200){
+
+    static function success( $result = null, string $message = null, $code =200) :JsonResponse
+    {
         return response()->json([
             'error'=> false,
             'message' => $message,
@@ -22,7 +27,8 @@ class ApiResponse
      * @param int $errorCode
      * @return \Illuminate\Http\JsonResponse
      */
-    static function fail($message, int $errorCode = 200){
+    static function fail($message, int $errorCode = 200): JsonResponse
+    {
         return response()->json([
             'error'=> true,
             'message' => $message,
