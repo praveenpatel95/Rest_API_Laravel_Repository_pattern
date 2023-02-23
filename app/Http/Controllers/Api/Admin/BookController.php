@@ -17,7 +17,7 @@ class BookController extends Controller
     }
 
     /**
-     * Retrieves all books
+     * Retrieves all books with pagination
      * @return JsonResponse
      */
     public function index(Request $request) : JsonResponse
@@ -26,7 +26,7 @@ class BookController extends Controller
     }
 
     /**
-     * Create new book
+     * Create new book in the storage
      * @param Request $request
      * @return JsonResponse
      */

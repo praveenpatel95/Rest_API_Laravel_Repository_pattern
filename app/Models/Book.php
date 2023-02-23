@@ -21,7 +21,14 @@ class Book extends Model
       'publisher'
     ];
 
+    /**
+     * Return file storage path
+     * @param $value
+     * @return string
+     */
     public function getImageAttribute($value){
         return asset('storage/'.$value);
     }
+
+
 }
